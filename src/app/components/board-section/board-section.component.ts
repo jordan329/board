@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { TicketData } from '../models/ticket-data';
-import { SectionData } from '../models/section-data';
+import { TicketData } from '../../models/ticket-data';
+import { SectionData } from '../../models/section-data';
 
 @Component({
   selector: 'board-section',
