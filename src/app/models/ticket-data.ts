@@ -10,4 +10,5 @@ export interface TicketData {
   type?: TicketType;
   section: string;
   id: uuid;
+  dateLateChanged?:Date;
 }
