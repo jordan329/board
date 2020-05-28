@@ -15,6 +15,7 @@ import { Column } from './models/column';
 })
 export class AppComponent implements OnInit, OnDestroy {
   components: string[] = ['Board', 'Ticket Management'];
+  rawBoard: Board;
   board: Board;
   ticketManagement: Board;
   displayingComponent: string = this.components[0];
@@ -27,15 +28,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.boardSub.unsubscribe();
   }
   ngOnInit(): void {
-    this.boardSub = this.ticketService.getBoardByName("test").subscribe(x => {
-      this.ticketManagement = { ...x };
-      var filteredColumns:Array<Column> = []
-      x.columns.forEach(col => { if (col.onBoard) { filteredColumns.push({ ...col }) } })
-      this.board = {
-        name: x.name,
-        columns: filteredColumns
-      }
-    })
+    this.loadData()
   }
 
   onChange(e) {
@@ -47,6 +40,36 @@ export class AppComponent implements OnInit, OnDestroy {
 
     dialogRef.afterClosed().subscribe((result: Ticket) => {
       this.ticketService.createTicket(result);
+      this.loadData()
     });
+  }
+
+  loadData() {
+    this.boardSub = this.ticketService.getBoardByName("test").subscribe((x: Board) => {
+      console.log("og board", x)
+      var boardColumns: Array<Column> = [];
+      var manageColumns: Array<Column> = [];
+
+      x.columns.forEach(col => {
+        if (col.onBoard) {
+          boardColumns.push({ ...col })
+        } else {
+          manageColumns.push({ ...col })
+        }
+      })
+
+      this.board = {
+        name: x.name,
+        columns: [...boardColumns]
+      };
+
+      this.ticketManagement = {
+        name: x.name,
+        columns: [...manageColumns]
+      };
+      console.log("this.board", this.board)
+      console.log("this.ticketManagement", this.ticketManagement)
+    });
+
   }
 }

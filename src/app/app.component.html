@@ -10,6 +10,6 @@
   </mat-card>
   <mat-card>
     <board *ngIf="displayingComponent === components[0]" [boardData]="board"></board>
-    <ticket-management *ngIf="displayingComponent === components[1]" [boardData]="board"></ticket-management>
+    <ticket-management *ngIf="displayingComponent === components[1]" [boardData]="ticketManagement"></ticket-management>
   </mat-card>
 </div>

@@ -13,8 +13,8 @@ export class TicketManagementComponent implements OnInit {
   @Input() boardData: Board;
   backlog: Column;
   archive: Column;
-  staging: Column = { title: "Staging", onBoard: false, tickets: [] };
-
+  staging: Column;
+  
   constructor(private ticketService: TicketService) { }
   ngOnInit() {
     console.log(this.boardData)

@@ -64,6 +64,6 @@ export class TicketService {
 
   public createTicket(ticket: Ticket) {
     //throw new Error("Method: createTicket not implemented.");
-    console.log("hello from createTicket", ticket)
+    Tickets.push(ticket);
   }
 }
