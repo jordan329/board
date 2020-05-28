@@ -48,8 +48,8 @@ export var FakeBoardOne: Board = {
           points: 3,
         } as Ticket,
         {
-          title: "test doing title 5",
-          description: "test doing description",
+          title: "test doing title 5fffffffffffffffffffffffffffffffffff",
+          description: "test doing description more realistice that it could be long... I mean this is supposed to look good no matter whata;lsfjka;lskdjf;aslkdjf",
           priority: TicketPriority.Low,
           section: "doing",
           id: uuid(),

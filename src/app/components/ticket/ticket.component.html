@@ -1,5 +1,10 @@
 <mat-card>
-  <mat-card-title>{{ticketData.title}} -- {{ticketData.points?ticketData.points:''}}</mat-card-title>
-  <mat-card-content>{{ticketData.description}}</mat-card-content>
-  <h5>{{ticketData.priority?ticketData.priority:''}}</h5>
+  <mat-card-title>{{ticketData.title}}</mat-card-title>
+  <mat-card-content>
+    Priority: {{ticketData.priority?ticketData.priority:''}}
+    <br>
+    Desctiption: {{ticketData.description}}
+    <br>
+    Points: {{ticketData.points?ticketData.points:''}}
+  </mat-card-content>
 </mat-card>
