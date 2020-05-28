@@ -1,1 +1,15 @@
-<p>ticket-management works!</p>
+<div fxLayout="row" fxLayoutAlign="center">
+  <h1>
+    Ticket Managment
+  </h1>
+</div>
+<div fxLayout="row" cdkDropListGroup fxLayoutGap="10px">
+  <div fxLayout="column" fxLayoutGap="10px" fxFlex>
+    <column fxFlex [data]='staging.tickets'>
+    </column>
+    <column fxFlex [data]='backlog.tickets'>
+    </column>
+  </div>
+  <column  [data]='archive.tickets'>
+  </column>
+</div>

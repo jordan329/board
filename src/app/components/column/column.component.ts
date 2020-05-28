@@ -9,7 +9,7 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
 })
 export class ColumnComponent implements OnInit {
 
-  @Input() sectionData: Column;
+  @Input() data: Column;
   constructor() { }
 
   ngOnInit() {
