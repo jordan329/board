@@ -19,8 +19,9 @@ export class CreateTicketDialogComponent implements OnInit {
   points: number = 0;
   priority: string = TicketPriority.Low;
   section: string = Section.Backlog;
-  Sections = Section;
-  Priorities = TicketPriority;
+
+  sections = Section.getAll();
+  priorities = TicketPriority.getAll();
   constructor(
     public dialogRef: MatDialogRef<CreateTicketDialogComponent>,
 

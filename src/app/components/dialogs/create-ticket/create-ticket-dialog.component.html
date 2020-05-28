@@ -9,16 +9,14 @@
 </mat-form-field>
 <mat-form-field>
   <mat-label>Priority</mat-label>
-  <select matNativeControl required>
-    <option *ngFor="let priority of Priorities" [value]="priority">Volvo</option>
-
+  <select matNativeControl required [(ngModel)]="priority">
+    <option *ngFor="let priority of priorities" valuel="priority">{{priority}}</option>
   </select>
 </mat-form-field>
 <mat-form-field>
   <mat-label>Section</mat-label>
-  <select matNativeControl required>
-    <option *ngFor="let section of Sections" [value]="section">Volvo</option>
-
+  <select matNativeControl required [(ngModel)]="section">
+    <option *ngFor="let section of sections" [value]="section">{{section}}</option>
   </select>
 </mat-form-field>
 <mat-form-field fxLayout="column">
