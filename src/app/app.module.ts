@@ -9,6 +9,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { BoardComponent } from './containers/board/board.component';
 import { ColumnComponent } from './components/column/column.component';
 import { TicketManagementComponent } from './containers/ticket-management/ticket-management.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { TicketManagementComponent } from './containers/ticket-management/ticket
     BrowserModule,
     FlexLayoutModule,
     MatCardModule,
-    DragDropModule
+    DragDropModule,
+    MatRadioModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

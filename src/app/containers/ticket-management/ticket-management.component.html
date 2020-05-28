@@ -4,12 +4,14 @@
   </h1>
 </div>
 <div fxLayout="row" cdkDropListGroup fxLayoutGap="10px">
-  <div fxLayout="column" fxLayoutGap="10px" fxFlex>
-    <column fxFlex [data]='staging.tickets'>
+  <div fxLayout="column" fxLayoutGap="10px">
+    <column [data]='staging'>
     </column>
-    <column fxFlex [data]='backlog.tickets'>
+    <column [data]='backlog'>
     </column>
   </div>
-  <column  [data]='archive.tickets'>
-  </column>
+  <div fxLayout="column" fxLayoutGap="10px">
+    <column [data]='archive'>
+    </column>
+  </div>
 </div>

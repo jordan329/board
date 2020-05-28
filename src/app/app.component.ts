@@ -5,4 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
-export class AppComponent { }
+export class AppComponent {
+  components: string[] = ['Board', 'Ticket Management'];
+  displayingComponent: string = this.components[0];
+
+  onChange(e) {
+    this.displayingComponent = e.value
+  }
+}

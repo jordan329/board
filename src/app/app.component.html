@@ -1,2 +1,16 @@
-<board></board>
-<ticket-management></ticket-management>
+<div fxLayout="column" fxLayoutGap="10px">
+  <mat-card fxLayout="row" fxLayoutAlign="space-between center">
+    <mat-radio-group fxLayout="row" fxLayoutGap="10px">
+      <mat-radio-button class="example-radio-button" *ngFor="let component of components" [value]="component"
+        (change)="onChange($event)" [checked]="displayingComponent===component?true:false">
+        {{component}}
+      </mat-radio-button>
+    </mat-radio-group>
+    <button mat-raised-button color="primary">Create Ticket</button>
+  </mat-card>
+  <mat-card>
+    <board *ngIf="displayingComponent === components[0]"></board>
+    <ticket-management *ngIf="displayingComponent === components[1]"></ticket-management>
+  </mat-card>
+
+</div>
