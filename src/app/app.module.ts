@@ -6,13 +6,14 @@ import { TicketComponent } from './components/ticket/ticket.component';
 import { MatCardModule } from '@angular/material/card';
 import { CreateTicketComponent } from './components/create-ticket/create-ticket.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { BoardComponent } from './components/board/board.component';
+import { BoardComponent } from './containers/board/board.component';
 import { ColumnComponent } from './components/column/column.component';
+import { TicketManagementComponent } from './containers/ticket-management/ticket-management.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, TicketComponent, CreateTicketComponent, BoardComponent, ColumnComponent
+    AppComponent, TicketComponent, CreateTicketComponent, BoardComponent, ColumnComponent, TicketManagementComponent
   ],
   imports: [
     BrowserModule,

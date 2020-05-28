@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Board } from 'src/app/models/board';
-import { TicketService } from '../api/ticket.service';
+import { TicketService } from '../../components/api/ticket.service';
 
 @Component({
   selector: 'board',
