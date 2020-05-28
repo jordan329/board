@@ -1,5 +1,5 @@
 import { Column } from 'src/app/models/column';
-import { TicketPriority } from 'src/app/models/enums/ticket-priority';
+import { TicketPriority } from 'src/app/models/constants/ticket-priority';
 import { Ticket } from 'src/app/models/ticket';
 import { v4 as uuid } from 'uuid';
 

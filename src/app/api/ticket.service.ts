@@ -3,6 +3,7 @@ import { FakeBoardOne } from './test-constants/fake-board-one';
 import { Board } from 'src/app/models/board';
 import { Column } from 'src/app/models/column';
 import { Backlog, Archive } from './test-constants/fake-ticket-managment';
+import { Ticket } from '../models/ticket';
 
 
 @Injectable({
@@ -12,7 +13,7 @@ export class TicketService {
   constructor() { }
 
   public updateTicket() {
-    throw new Error("Method: updateTicket not implemented.");
+    console.log("hello from updateTicket")
   }
 
   public getBoardByName(name: String): Board {
@@ -20,12 +21,15 @@ export class TicketService {
   }
 
   public getTicketsInBacklog(): Column {
-    console.log(Backlog)
     return Backlog;
   }
 
   public getTicketsInArchive(): Column {
-    console.log(Archive)
     return Archive;
+  }
+
+  public createTicket(ticket: Ticket) {
+    //throw new Error("Method: createTicket not implemented.");
+    console.log("hello from createTicket",ticket)
   }
 }

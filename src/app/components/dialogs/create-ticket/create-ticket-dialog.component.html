@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Create a Ticket</h1>
+<mat-form-field fxLayout="column">
+  <mat-label>Title</mat-label>
+  <input [(ngModel)]="title" matInput type="text">
+</mat-form-field>
+<mat-form-field fxLayout="column">
+  <mat-label>Points</mat-label>
+  <input [(ngModel)]="points" matInput type="number">
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Priority</mat-label>
+  <select matNativeControl required>
+    <option *ngFor="let priority of Priorities" [value]="priority">Volvo</option>
+
+  </select>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Section</mat-label>
+  <select matNativeControl required>
+    <option *ngFor="let section of Sections" [value]="section">Volvo</option>
+
+  </select>
+</mat-form-field>
+<mat-form-field fxLayout="column">
+  <mat-label>Description</mat-label>
+  <textarea [(ngModel)]="description" matInput type="text"></textarea>
+</mat-form-field>
+<div mat-dialog-actions fxLayout="row" fxLayoutAlign="space-between">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="ticket" (click)="onCreate()">Create</button>
+</div>

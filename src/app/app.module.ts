@@ -4,18 +4,21 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import { TicketComponent } from './components/ticket/ticket.component';
 import { MatCardModule } from '@angular/material/card';
-import { CreateTicketComponent } from './components/create-ticket/create-ticket.component';
+import { CreateTicketDialogComponent } from './components/dialogs/create-ticket/create-ticket-dialog.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { BoardComponent } from './containers/board/board.component';
 import { ColumnComponent } from './components/column/column.component';
 import { TicketManagementComponent } from './containers/ticket-management/ticket-management.component';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent, TicketComponent, CreateTicketComponent, BoardComponent, ColumnComponent, TicketManagementComponent
+    AppComponent, TicketComponent, CreateTicketDialogComponent, BoardComponent, ColumnComponent, TicketManagementComponent
   ],
   imports: [
     BrowserModule,
@@ -23,9 +26,14 @@ import { MatButtonModule } from '@angular/material/button';
     MatCardModule,
     DragDropModule,
     MatRadioModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [CreateTicketDialogComponent]
 })
 export class AppModule { }
