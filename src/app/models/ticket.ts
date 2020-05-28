@@ -2,7 +2,7 @@ import { TicketPriority } from './enums/ticket-priority';
 import { TicketType } from './enums/ticket-type';
 import {v4 as uuid} from 'uuid';
 
-export interface TicketData {
+export interface Ticket {
   description?: string;
   title: string;
   points?: number;

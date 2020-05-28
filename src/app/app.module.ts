@@ -3,19 +3,22 @@ import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import { TicketComponent } from './components/ticket/ticket.component';
-import { BoardSectionComponent } from './components/board-section/board-section.component';
 import { MatCardModule } from '@angular/material/card';
 import { CreateTicketComponent } from './components/create-ticket/create-ticket.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { BoardComponent } from './components/board/board.component';
+import { ColumnComponent } from './components/column/column.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, TicketComponent, BoardSectionComponent, CreateTicketComponent
+    AppComponent, TicketComponent, CreateTicketComponent, BoardComponent, ColumnComponent
   ],
   imports: [
     BrowserModule,
     FlexLayoutModule,
-    MatCardModule
+    MatCardModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
