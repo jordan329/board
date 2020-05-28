@@ -1,7 +1,7 @@
 export var Section = {
   Backlog: "Backlog",
   Staging: "Staging",
-  ToDo: "ToDo",
+  ToDo: "To Do",
   Doing: "Doing",
   Done: "Done",
   Archive: "Archive",

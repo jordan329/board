@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Column } from 'src/app/models/column';
 import { TicketService } from 'src/app/api/ticket.service';
+import { Board } from 'src/app/models/board';
+import { Section } from 'src/app/models/constants/section';
 
 @Component({
   selector: 'ticket-management',
@@ -8,14 +10,17 @@ import { TicketService } from 'src/app/api/ticket.service';
   styleUrls: ['./ticket-management.component.sass']
 })
 export class TicketManagementComponent implements OnInit {
+  @Input() boardData: Board;
   backlog: Column;
   archive: Column;
-  staging: Column = { title: "Staging", tickets: [] };
+  staging: Column = { title: "Staging", onBoard: false, tickets: [] };
 
   constructor(private ticketService: TicketService) { }
   ngOnInit() {
-    this.backlog = this.ticketService.getTicketsInBacklog();
-    this.archive = this.ticketService.getTicketsInArchive();
+    console.log(this.boardData)
+    this.backlog = this.boardData.columns.find(x => x.title === Section.Backlog);
+    this.archive = this.boardData.columns.find(x => x.title === Section.Archive);
+    this.staging = this.boardData.columns.find(x => x.title === Section.Staging);
   }
 
 }

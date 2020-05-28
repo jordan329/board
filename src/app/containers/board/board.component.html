@@ -1,9 +1,9 @@
 <div fxLayout="row" fxLayoutAlign="center">
     <h1>
-      {{boardData.name}}
+      {{boardData?.name?boardData.name:"???"}}
     </h1>
 </div>
 <div fxLayout="row" cdkDropListGroup fxLayoutGap="10px">
-  <column fxFlex *ngFor="let sectionData of boardData.columns" [data]='sectionData'>
+  <column fxFlex *ngFor="let sectionData of boardData?.columns" [data]='sectionData'>
   </column>
 </div>

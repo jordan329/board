@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Board } from 'src/app/models/board';
-import { TicketService } from 'src/app/api/ticket.service';
 
 @Component({
   selector: 'board',
@@ -9,12 +8,11 @@ import { TicketService } from 'src/app/api/ticket.service';
 })
 export class BoardComponent implements OnInit {
 
-  public boardData:Board;
-  constructor(private ticketService: TicketService) {
+  @Input() boardData: Board;
+  constructor() {
 
   }
   ngOnInit() {
-    this.boardData = this.ticketService.getBoardByName("doesn't matter yet we only have fake data");
   }
 
 }

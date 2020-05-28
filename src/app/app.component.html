@@ -9,7 +9,7 @@
     <button mat-raised-button color="primary" (click)="createTicket()">Create Ticket</button>
   </mat-card>
   <mat-card>
-    <board *ngIf="displayingComponent === components[0]"></board>
-    <ticket-management *ngIf="displayingComponent === components[1]"></ticket-management>
+    <board *ngIf="displayingComponent === components[0]" [boardData]="board"></board>
+    <ticket-management *ngIf="displayingComponent === components[1]" [boardData]="board"></ticket-management>
   </mat-card>
 </div>
