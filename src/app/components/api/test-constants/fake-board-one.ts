@@ -5,13 +5,13 @@ import { Board } from 'src/app/models/board';
 
 export var FakeBoardOne: Board = {
   id: uuid(),
-  name:"Mockup Test Board",
+  name:"Mockup Test Board Name",
   columns: [
     {
       title: 'Todo',
       tickets: [
         {
-          title: "test todo title",
+          title: "test todo title 1",
           description: "test todo description",
           priority: TicketPriority.Medium,
           section: "todo",
@@ -19,7 +19,7 @@ export var FakeBoardOne: Board = {
           points: 3,
         } as Ticket,
         {
-          title: "test todo title",
+          title: "test todo title 2",
           description: "test todo description",
           priority: TicketPriority.Low,
           section: "todo",
@@ -27,7 +27,7 @@ export var FakeBoardOne: Board = {
           points: 3,
         } as Ticket,
         {
-          title: "test todo title",
+          title: "test todo title 3",
           description: "test todo description",
           priority: TicketPriority.High,
           section: "todo",
@@ -40,7 +40,7 @@ export var FakeBoardOne: Board = {
       title: 'Doing',
       tickets: [
         {
-          title: "test doing title",
+          title: "test doing title 4",
           description: "test doing description",
           priority: TicketPriority.Medium,
           section: "doing",
@@ -48,7 +48,7 @@ export var FakeBoardOne: Board = {
           points: 3,
         } as Ticket,
         {
-          title: "test doing title",
+          title: "test doing title 5",
           description: "test doing description",
           priority: TicketPriority.Low,
           section: "doing",
@@ -56,7 +56,7 @@ export var FakeBoardOne: Board = {
           points: 3,
         } as Ticket,
         {
-          title: "test doing title",
+          title: "test doing title 6",
           description: "test doing description",
           priority: TicketPriority.High,
           section: "doing",
@@ -69,7 +69,7 @@ export var FakeBoardOne: Board = {
       title: 'Done',
       tickets: [
         {
-          title: "test done title",
+          title: "test done title 7",
           description: "test done description",
           priority: TicketPriority.Medium,
           section: "done",
@@ -77,7 +77,7 @@ export var FakeBoardOne: Board = {
           points: 3,
         } as Ticket,
         {
-          title: "test done title",
+          title: "test done title 8",
           description: "test done description",
           priority: TicketPriority.Low,
           section: "done",
@@ -85,7 +85,7 @@ export var FakeBoardOne: Board = {
           points: 3,
         } as Ticket,
         {
-          title: "test done title",
+          title: "test done title 9",
           description: "test done description",
           priority: TicketPriority.High,
           section: "done",

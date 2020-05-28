@@ -1,8 +1,7 @@
-<mat-card>
+<mat-card cdkDropList [cdkDropListData]="sectionData.tickets" (cdkDropListDropped)="drop($event)">
   <h2>{{sectionData.title}}</h2>
   <div fxLayout="column" fxLayoutGap="10px">
-    <ticket *ngFor="let ticketData of sectionData.tickets" [ticketData]="ticketData">
-
+    <ticket *ngFor="let ticketData of sectionData.tickets" [ticketData]="ticketData" cdkDrag>
     </ticket>
   </div>
 </mat-card>

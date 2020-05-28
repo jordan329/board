@@ -1,8 +1,14 @@
 <br>
-<br>
+<div fxLayout="row" fxLayoutAlign="center">
+  <div>
+    <h1>
+      {{boardData.name}}
+    </h1>
+  </div>
+</div>
 <br>
 <!-- breaks are just to push the cards down. poor long term solution -->
-<div fxLayout="row" fxLayoutAlign="space-evenly" >
-  <column *ngFor="let sectionData of boardData.columns" [sectionData]='sectionData'>
+<div fxLayout="row" fxLayoutAlign="space-evenly stretch">
+  <column fxFlex *ngFor="let sectionData of boardData.columns" [sectionData]='sectionData'>
   </column>
 </div>
